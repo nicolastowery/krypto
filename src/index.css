@@ -1,0 +1,398 @@
+:root {
+  --primary: #8282d7;
+  --secondary: #96d4d7;
+}
+
+::selection,
+::-moz-selection {
+  background: var(--secondary);
+  color: rgba(0, 0, 0, 0.8);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #0002359d #000235c9; /* thumb color and track color */
+  margin: 0;
+  box-sizing: border-box;
+  /* z-index: 1; */
+
+  color: #fff;
+  text-decoration: none;
+  font-family: "Outfit";
+  font-size: 20px;
+  font-weight: 400;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 87px;
+  text-transform: capitalize;
+  line-height: 100%;
+  width: 500px;
+  height: 272px;
+}
+
+button {
+  border-radius: 50px;
+  height: 75.1px;
+  width: 253.7px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary);
+  cursor: pointer;
+  transition: 0.2s ease-in;
+}
+
+button:hover {
+  background-color: var(--secondary);
+  color: #000;
+}
+
+input:focus {
+  outline: none;
+}
+
+.sub-heading {
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+  line-height: 28px;
+}
+
+.buttonContainer {
+  display: flex;
+  column-gap: 20px;
+  padding-top: auto;
+  padding-top: 40px;
+}
+
+.secondaryButton {
+  background-color: inherit;
+  border: 2px solid var(--secondary);
+  overflow: visible;
+
+  z-index: 1;
+}
+
+.secondaryButton:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 9px var(--secondary);
+  background-color: inherit;
+  color: inherit;
+}
+
+.app {
+  width: 1200px;
+  margin: 0 20px 0 20px;
+}
+
+.appContainer {
+  background-color: #000235;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 44.91px;
+}
+
+.navbarList {
+  display: flex;
+  gap: 70px;
+}
+
+.logo {
+  text-transform: uppercase;
+  font-family: "Outfit";
+  font-weight: 600;
+}
+
+.hero {
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.heroImage {
+  padding-bottom: 75px;
+}
+
+.heroBodyText {
+  margin: 10px 0 0 0;
+}
+
+.bodyText {
+  font-family: "Roboto";
+  font-size: 18px;
+  line-height: 28px;
+  width: 375px;
+}
+
+.brandContainer {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  background: rgba(48, 40, 99, 0.2);
+  border-radius: 5px;
+}
+
+.brands {
+  margin-top: 100px;
+}
+
+.ad {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 300px;
+  column-gap: 6%;
+}
+
+.adButtonContainer {
+  margin-top: 30px;
+}
+
+.adButton {
+  width: 380px;
+}
+
+.adTextContainer {
+  width: 506px;
+}
+
+.adHeading,
+.testimonialHeading {
+  color: var(--secondary);
+}
+
+.adTitle,
+.ctaTitle,
+.testimonialTitle {
+  font-size: 57px;
+  font-weight: 700;
+  line-height: 100%;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+  overflow-x: visible;
+}
+
+.testimonials {
+  margin-top: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonialTitle {
+  text-align: center;
+  max-width: 500px;
+}
+
+.testimonialCardContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+  margin-top: 135px;
+  overflow-x: visible;
+}
+
+.testimonialCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #292b6a;
+  border-radius: 20px;
+  padding: 0 25px;
+  height: 262px;
+  max-width: 345px;
+  position: relative;
+  z-index: 1;
+  overflow-x: visible;
+}
+
+.testimonialPhoto {
+  border-radius: 999px;
+  position: absolute;
+  top: -80px;
+  z-index: 2;
+}
+
+.testimonialText {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 119%;
+  text-align: center;
+  width: 300px;
+}
+
+.testimonialName {
+  margin-top: 65px;
+  margin-bottom: 40px;
+}
+
+.cta {
+  height: 403px;
+  background: linear-gradient(
+    280.52deg,
+    #96d4d5 -11.5%,
+    rgba(81, 81, 200, 0.784314) 105.82%
+  );
+  border-radius: 20px;
+  margin-top: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ctaHeading {
+  margin-top: 40px;
+  color: #000;
+}
+
+.ctaTitle {
+  max-width: 500px;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+
+.ctaButton {
+  background-color: #000;
+}
+
+.ctaButton:hover {
+  background: linear-gradient(
+    280.52deg,
+    rgba(81, 81, 200, 0.784314) -11.5%,
+    #96d4d5 105.82%
+  );
+}
+
+.footer {
+  margin-top: 300px;
+  margin-bottom: 70px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footerLogo {
+  font-size: 22px;
+}
+
+.footerNavListHeading {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.footerNavList ul {
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+  row-gap: 20px;
+}
+.footerNavListItem {
+  font-family: "Roboto";
+  text-transform: capitalize;
+  font-size: 16px;
+}
+
+.newsLetterTitle {
+  font-weight: 600;
+  font-size: 22px;
+}
+
+.newsLetterInputContainer {
+  display: flex;
+  background-color: #292b6a;
+  border-radius: 35px;
+  margin-top: 30px;
+}
+
+.newsLetterButton {
+  height: 52px;
+  width: 111px;
+  font-size: 14px;
+}
+
+.newsLetterInput {
+  background-color: inherit;
+  border: none;
+  margin-left: 20px;
+  font-size: 16px;
+  font-family: "Roboto";
+}
+
+.bottomGradient {
+  width: 100dvw;
+  height: 18px;
+  background: linear-gradient(
+    280.52deg,
+    #96d4d5 -11.5%,
+    rgba(81, 81, 200, 0.784314) 105.82%
+  );
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+  padding-left: 7px;
+  letter-spacing: 0.7px;
+  display: flex;
+  align-items: center;
+  overflow-x: visible;
+}
+
+.bottomGradient a {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: underline;
+  letter-spacing: 0.7px;
+  transition: 0.2s ease;
+}
+
+.bottomGradient a:hover {
+  color: #fff;
+}
+
+.circle {
+  position: absolute;
+  z-index: 0;
+  border-radius: 999rem;
+  filter: blur(13.15625rem);
+  width: 43.375rem;
+  height: 43.375rem;
+}
+
+.circle1 {
+  left: 1.625rem;
+  top: -30.5rem;
+  background: rgba(126, 128, 215, 0.4);
+}
+
+.circle2 {
+  right: -25.25rem;
+  top: 20.375rem;
+  background: rgba(148, 212, 212, 0.6);
+}
+
+.circle3 {
+  width: 30.9375rem;
+  height: 30.9375rem;
+  left: -21.8125rem;
+  top: 124.75rem;
+  background: #d1a06788;
+}

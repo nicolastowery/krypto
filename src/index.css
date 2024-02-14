@@ -11,7 +11,7 @@
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: #0002359d #000235c9; /* thumb color and track color */
+  scrollbar-color: #0002359d #000235c9;
   margin: 0;
   box-sizing: border-box;
   /* z-index: 1; */

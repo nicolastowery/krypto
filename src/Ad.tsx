@@ -22,7 +22,7 @@ export default function Ad({
       <section className="ad">
         <div className="adTextContainer">
           <h2 className="sub-heading adTextHeading">{heading}</h2>
-          <div className="adTitle">{title}</div>
+          <div className="adTextTitle">{title}</div>
           <div className="bodyText">{text}</div>
           <div className="adButtonContainer">
             <button className="sub-heading adButton">{buttonText}</button>
@@ -39,8 +39,9 @@ export default function Ad({
         <img src={imagePath} className="adImage" />
       </div>
       <div className="adTextContainer">
-        <h2 className="sub-heading adTextHeading">{heading}</h2>
-        <div className="adTextTitle">{title}</div>
+        {/* change these class names */}
+        <h2 className="sub-heading testimonialHeading">{heading}</h2>
+        <div className="testimonialTitle">{title}</div>
         <div className="bodyText">{text}</div>
         <div className="adButtonContainer">
           <button className="sub-heading adButton">{buttonText}</button>

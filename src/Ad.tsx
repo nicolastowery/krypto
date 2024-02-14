@@ -40,8 +40,8 @@ export default function Ad({
       </div>
       <div className="adTextContainer">
         {/* change these class names */}
-        <h2 className="sub-heading testimonialHeading">{heading}</h2>
-        <div className="testimonialTitle">{title}</div>
+        <h2 className="sub-heading adTextHeading">{heading}</h2>
+        <div className="adTextTitle">{title}</div>
         <div className="bodyText">{text}</div>
         <div className="adButtonContainer">
           <button className="sub-heading adButton">{buttonText}</button>

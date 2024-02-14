@@ -21,7 +21,7 @@ export default function Ad({
     return (
       <section className="ad">
         <div className="adTextContainer">
-          <h2 className="sub-heading adHeading">{heading}</h2>
+          <h2 className="sub-heading adTextHeading">{heading}</h2>
           <div className="adTitle">{title}</div>
           <div className="bodyText">{text}</div>
           <div className="adButtonContainer">
@@ -39,8 +39,8 @@ export default function Ad({
         <img src={imagePath} className="adImage" />
       </div>
       <div className="adTextContainer">
-        <h2 className="sub-heading adHeading">{heading}</h2>
-        <div className="adTitle">{title}</div>
+        <h2 className="sub-heading adTextHeading">{heading}</h2>
+        <div className="adTextTitle">{title}</div>
         <div className="bodyText">{text}</div>
         <div className="adButtonContainer">
           <button className="sub-heading adButton">{buttonText}</button>

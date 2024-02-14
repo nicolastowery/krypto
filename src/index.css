@@ -172,12 +172,12 @@ input:focus {
   width: 506px;
 }
 
-.adHeading,
+.adTextHeading,
 .testimonialHeading {
   color: var(--secondary);
 }
 
-.adTitle,
+.adTextTitle,
 .ctaTitle,
 .testimonialTitle {
   font-size: 57px;

@@ -1,16 +1,19 @@
+import { NavLink } from "react-router-dom";
 import "./index.css";
 export default function Header() {
   return (
     <header className="header">
-      <span className="logo">Krypto</span>
+      <NavLink to="/" className="logo">
+        Krypto
+      </NavLink>
       <ul className="navbar">
         <li className="navbarList">
-          <a href="#" className="navbarListItem">
+          <NavLink to="#" className="navbarListItem">
             about
-          </a>
-          <a href="#" className="navbarListItem">
+          </NavLink>
+          <NavLink to="/pricing" className="navbarListItem">
             pricing
-          </a>
+          </NavLink>
           <a href="#" className="navbarListItem">
             contact
           </a>

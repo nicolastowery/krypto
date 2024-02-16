@@ -9,6 +9,28 @@
   color: rgba(0, 0, 0, 0.8);
 }
 
+@keyframes fade-in-from-top {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px); /* sits where it should with 0px */
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 * {
   scrollbar-width: thin;
   scrollbar-color: #0002359d #000235c9;
@@ -25,12 +47,12 @@
 }
 
 h1 {
-  font-weight: 700;
-  font-size: 87px;
-  text-transform: capitalize;
-  line-height: 100%;
-  width: 500px;
   height: 275px;
+  width: 500px;
+  line-height: 100%;
+  font-weight: 700;
+  text-transform: capitalize;
+  font-size: 87px;
 }
 
 button {
@@ -53,6 +75,16 @@ button:hover {
 
 input:focus {
   outline: none;
+}
+
+ul {
+  padding-left: 0;
+}
+
+.pricingHero {
+  width: 630px;
+  height: auto;
+  text-align: center;
 }
 
 .sub-heading {
@@ -95,6 +127,7 @@ input:focus {
   display: flex;
   justify-content: center;
   overflow-x: hidden;
+  min-height: calc(100dvh - 17px);
 }
 
 .header {
@@ -102,6 +135,7 @@ input:focus {
   display: flex;
   justify-content: space-between;
   margin-top: 44.91px;
+  animation: fade-in-from-top 0.8s ease;
 }
 
 .navbarList {
@@ -119,7 +153,10 @@ input:focus {
   margin-top: 100px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 11%;
+  flex-wrap: wrap;
+  animation: fade-in-from-top 0.8s ease 0.1s backwards;
 }
 
 .heroImage {
@@ -149,6 +186,7 @@ input:focus {
 
 .brands {
   margin-top: 100px;
+  animation: fade-in-from-top 0.8s ease 0.2s backwards;
 }
 
 .ad {
@@ -179,6 +217,7 @@ input:focus {
 
 .adTextTitle,
 .ctaTitle,
+.price,
 .testimonialTitle {
   font-size: 57px;
   font-weight: 700;
@@ -301,7 +340,6 @@ input:focus {
 }
 
 .footerNavList ul {
-  padding-left: 0;
   display: flex;
   flex-direction: column;
   margin-top: 25px;
@@ -337,6 +375,104 @@ input:focus {
   margin-left: 20px;
   font-size: 16px;
   font-family: "Roboto";
+}
+
+.pricingCardContainer {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  animation: fade-in-from-top 0.8s ease 0.2s backwards;
+}
+
+.pricingCard {
+  height: 531px;
+  width: 255px;
+  background: linear-gradient(340.27deg, #292b6a -31.03%, #5a5b8e 154.01%);
+  border-radius: 13px;
+  padding: 10px 20px 0 20px;
+}
+
+.mostPopularPricingCard {
+  background: linear-gradient(
+    346.82deg,
+    #96d4d5 -16.56%,
+    rgba(81, 81, 200, 0.75) 131.42%
+  );
+}
+
+.pricingCardBodyText {
+  font-size: 14px;
+  line-height: 18px;
+  width: auto;
+  margin-top: 10px;
+}
+
+.pricingCardButton {
+  border-radius: 13px;
+  font-size: 18px;
+  height: 42px;
+  width: 215px;
+  margin-top: 10px;
+}
+
+.mostPopularPricingCardButton {
+  background-color: #000;
+}
+
+.mostPopularPricingCardButton:hover {
+  background: linear-gradient(
+    346.82deg,
+    rgba(81, 81, 200, 0.75) -16.56%,
+    #96d4d5 131.42%
+  );
+}
+
+.pricing {
+  margin-top: 10px;
+  min-height: 70px;
+}
+
+.price {
+  margin: 0;
+  line-height: 123%;
+}
+
+.billingFrequency {
+  font-size: 13px;
+  font-family: "Roboto";
+}
+
+.pricingBar {
+  width: 211px;
+  height: 0.98px;
+  background: #8282d7;
+  margin-top: 9px;
+  margin-bottom: 9px;
+}
+
+.pricingList {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  margin-top: 10px;
+}
+
+.pricingListItem {
+  font-size: 14px;
+  font-family: "Roboto";
+  text-transform: capitalize;
+  line-height: 18px;
+}
+
+.pricingListItem a {
+  text-decoration: underline;
+}
+
+.mostPopular {
+  font-size: 11.5px;
+  padding-left: 5px;
+  color: #000;
+  font-weight: 500;
 }
 
 .bottomGradient {
@@ -375,6 +511,7 @@ input:focus {
   filter: blur(13.15625rem);
   width: 43.375rem;
   height: 43.375rem;
+  animation: fade-in 2s ease;
 }
 
 .circle1 {
@@ -387,6 +524,8 @@ input:focus {
   right: -25.25rem;
   top: 20.375rem;
   background: rgba(148, 212, 212, 0.6);
+  animation-delay: 0.1s;
+  animation-fill-mode: backwards;
 }
 
 .circle3 {

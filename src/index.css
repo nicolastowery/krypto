@@ -36,7 +36,7 @@
   scrollbar-color: #0002359d #000235c9;
   margin: 0;
   box-sizing: border-box;
-  /* z-index: 1; */
+  z-index: 1;
 
   color: #fff;
   text-decoration: none;
@@ -55,7 +55,9 @@ h1 {
   font-size: 87px;
 }
 
-button {
+button,
+.adButton,
+.ctaButton {
   border-radius: 50px;
   height: 75.1px;
   width: 253.7px;
@@ -68,7 +70,8 @@ button {
   transition: 0.2s ease-in;
 }
 
-button:hover {
+button:hover,
+.adButton:hover {
   background-color: var(--secondary);
   color: #000;
 }
@@ -83,7 +86,7 @@ ul {
 
 .pricingHero {
   width: 630px;
-  height: auto;
+  height: 185px;
   text-align: center;
 }
 
@@ -136,6 +139,19 @@ ul {
   justify-content: space-between;
   margin-top: 44.91px;
   animation: fade-in-from-top 0.8s ease;
+}
+
+.sticky {
+  position: fixed;
+  height: 35px;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0);
+  width: 100%;
+  z-index: 2;
+  margin-top: 0;
+  align-items: center;
+  padding: 0 20px;
 }
 
 .navbarList {
@@ -380,12 +396,14 @@ ul {
 .pricingCardContainer {
   margin-top: 100px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
   animation: fade-in-from-top 0.8s ease 0.2s backwards;
 }
 
 .pricingCard {
-  height: 531px;
+  min-height: 531px;
   width: 255px;
   background: linear-gradient(340.27deg, #292b6a -31.03%, #5a5b8e 154.01%);
   border-radius: 13px;
@@ -434,7 +452,8 @@ ul {
 
 .price {
   margin: 0;
-  line-height: 123%;
+  line-height: 122%;
+  display: inline-block;
 }
 
 .billingFrequency {
@@ -450,6 +469,10 @@ ul {
   margin-bottom: 9px;
 }
 
+.mostPopularPricingBar {
+  background: #fff;
+}
+
 .pricingList {
   display: flex;
   flex-direction: column;
@@ -462,10 +485,17 @@ ul {
   font-family: "Roboto";
   text-transform: capitalize;
   line-height: 18px;
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
 }
 
 .pricingListItem a {
   text-decoration: underline;
+}
+
+.pricingListItemCheck {
+  font-size: 14px;
 }
 
 .mostPopular {

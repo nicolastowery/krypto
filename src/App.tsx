@@ -23,6 +23,8 @@ function App() {
         Designed and developed by&nbsp;
         <a href="https://nicolastowery.com">Nicolas Towery.</a>
       </div>
+      <div className="circle1 circle"></div>
+      <div className="circle2 circle"></div>
     </>
   );
 }

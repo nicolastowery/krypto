@@ -1,7 +1,12 @@
 import Hero from "./Hero";
 import PricingCard from "./PricingCard";
+import { useEffect } from "react";
 
 export default function Pricing() {
+  // Without this, links that are not from the header will not reroute to the top of the page
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Hero
@@ -47,7 +52,7 @@ export default function Pricing() {
             "20,000 vault slots",
             "vault migration services",
             "ability to advertise",
-            "24/7 customer service",
+            "24/7 customer support",
           ]}
         />
         <PricingCard
@@ -59,7 +64,7 @@ export default function Pricing() {
             "premium analytics",
             "unlimited sales per month",
             "unlimited vault slots",
-            "personal customer success manager",
+            "customer success manager",
             "priority customer service",
           ]}
         />

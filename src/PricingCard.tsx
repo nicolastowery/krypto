@@ -1,3 +1,5 @@
+import { FaRegCheckCircle as Check } from "react-icons/fa";
+
 interface PricingCardProps {
   title: string;
   isMostPopular?: boolean;
@@ -16,7 +18,9 @@ export default function PricingCard({
   planFeatures,
 }: PricingCardProps) {
   return (
-    <div className={`pricingCard ${isMostPopular && "mostPopularPricingCard"}`}>
+    <div
+      className={`pricingCard ${isMostPopular ? "mostPopularPricingCard" : ""}`}
+    >
       <h2 className="sub-heading">
         {title}
         {isMostPopular && <span className="mostPopular">most popular</span>}
@@ -37,16 +41,24 @@ export default function PricingCard({
           </>
         )}
       </div>
-      <div className="pricingBar"></div>
+      <div
+        className={`pricingBar ${isMostPopular ? "mostPopularPricingBar" : ""}`}
+      ></div>
       <div>
         <ul className="pricingList">
           {planFeatures.map((p) => {
             if (typeof p === "string") {
-              return <li className="pricingListItem">{p}</li>;
+              return (
+                <li className="pricingListItem">
+                  <Check className="pricingListItemCheck" />
+                  {p}
+                </li>
+              );
             } else {
               return (
                 <li className="pricingListItem">
                   <a href={p.link} className="pricingListItem">
+                    <Check className="pricingListItemCheck" />
                     {p.name}
                   </a>
                 </li>

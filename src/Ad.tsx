@@ -1,10 +1,11 @@
 import "./index.css";
-
+import { NavLink } from "react-router-dom";
 interface AdProps {
   heading: string;
   title: string;
   text: string;
   buttonText: string;
+  link: string;
   imagePath: string;
   imageOnRight?: boolean;
 }
@@ -14,6 +15,7 @@ export default function Ad({
   title,
   text,
   buttonText,
+  link,
   imagePath,
   imageOnRight,
 }: AdProps) {
@@ -25,7 +27,9 @@ export default function Ad({
           <div className="adTextTitle">{title}</div>
           <div className="bodyText">{text}</div>
           <div className="adButtonContainer">
-            <button className="sub-heading adButton">{buttonText}</button>
+            <NavLink to={`/${link}`} className="sub-heading adButton">
+              {buttonText}
+            </NavLink>
           </div>
         </div>
         <div>
@@ -44,7 +48,9 @@ export default function Ad({
         <div className="adTextTitle">{title}</div>
         <div className="bodyText">{text}</div>
         <div className="adButtonContainer">
-          <button className="sub-heading adButton">{buttonText}</button>
+          <NavLink to={`/${link}`} className="sub-heading adButton">
+            {buttonText}
+          </NavLink>
         </div>
       </div>
     </section>

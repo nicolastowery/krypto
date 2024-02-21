@@ -3,8 +3,14 @@ import Brands from "./Brands";
 import Ad from "./Ad";
 import Testimonials from "./Testimonials";
 import CTA from "./CTA";
+import { useEffect } from "react";
 
 export default function Home() {
+  // Without this, links that are not from the header will not reroute to the top of the page
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <Hero
@@ -27,6 +33,7 @@ export default function Home() {
   monitor the value of your Krypto portfolio over time."
         buttonText="View our pricing"
         imagePath="analytics.png"
+        link="pricing"
       />
       <Ad
         heading="get our app"
@@ -35,6 +42,7 @@ export default function Home() {
         buttonText="download on ios"
         imagePath="app.png"
         imageOnRight={true}
+        link="pricing"
       />
       <Ad
         heading="24/7 access "
@@ -42,11 +50,11 @@ export default function Home() {
         text="With our easy-to-use platform, you can buy or sell assets from anywhere in the world, at any time."
         buttonText="get started"
         imagePath="access.png"
+        link="pricing"
       />
       <Testimonials />
       <CTA />
-      <div className="circle1 circle"></div>
-      <div className="circle2 circle"></div>
+
       <div className="circle3 circle"></div>
     </>
   );

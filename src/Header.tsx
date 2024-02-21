@@ -1,8 +1,25 @@
 import { NavLink } from "react-router-dom";
+import { useEffect, useState } from "react";
 import "./index.css";
 export default function Header() {
+  const [isSticky, setIsSticky] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.scrollY;
+
+      setIsSticky(offset > 200);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <header className="header">
+    <header className={`header ${isSticky ? "sticky" : ""}`}>
       <NavLink to="/" className="logo">
         Krypto
       </NavLink>
